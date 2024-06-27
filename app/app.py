@@ -7,7 +7,7 @@ from llm import get_qa_retriever
 
 
 st.set_page_config("Chat PDF")
-st.header("Ask your PDF questions using LLama3")
+st.header("Ask your PDF questions using OpenAI")
 st.subheader('File types supported: PDF')
 
 temp_file = "./temp.pdf"
