@@ -1,0 +1,10 @@
+langchain 
+langchain-openai 
+pypdf 
+langchainhub 
+langchain-community 
+langchain-experimental
+streamlit
+streamlit-pdf-viewer
+streamlit_chat
+faiss-cpu
