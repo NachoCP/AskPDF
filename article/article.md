@@ -140,6 +140,6 @@ I used the book [Cloud Data Lakes for Dummies](https://www.snowflake.com/resourc
 
 At a time when information is available in a voluminous form and at users’ disposal, the opportunity to engage in meaningful discussions with documents can go a long way in saving time in the process of mining valuable information from large PDF documents. With the help of the Retrieval-Augmented Generation, we can filter out unwanted information and pay attention to the actual information.
 
-This implementation offers a base solution, however, the possibilities to optimize it are enormous. It may be possible to further refine aspects such as embedding models, document chunking methods, and retrieval algorithms.
+This implementation offers a naive RAG solution, however, the possibilities to optimize it are enormous. Using different RAG techniques It may be possible to further refine aspects such as embedding models, document chunking methods, and retrieval algorithms.
 
 I hope that for you, this article is as fun to read as it was for me to create all of this!
