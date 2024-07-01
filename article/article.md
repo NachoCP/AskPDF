@@ -32,7 +32,7 @@ When building a basic **Retrieval-Augmented Generation (RAG)** system, there are
 #### Retrieval
 
 - **Embedding the Query**: Transforming the user’s query into an embedding form so it can be compared for similarity with the document embeddings.
-- **Searching the Vector DB**: The vector database or store contains vectors of different chunks of documents. Thus, by comparing this query embedding with the stored ones, the system determines which chunks are the most relevant to the query. Such comparison is often done with the help of computing cosine similarity or any other distance between vectors.
+- **Searching the Vector DB**: The vector database or store contains vectors of different chunks of documents. Thus, by comparing this query embedding with the stored ones, the system determines which chunks are the most relevant to the query. Such comparison is often done with the help of computing cosine similarty or any other similarity metric.
 - **Selecting Top-K Chunks**: Based on the similarity scores obtained, the system takes the k-chunks closest to the query embedding.
 
 #### Generation
