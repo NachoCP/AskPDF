@@ -22,7 +22,7 @@ When building a basic **Retrieval-Augmented Generation (RAG)** system, there are
 1. **Data Loading**: This initial stage involves the ingestion of PDFs, audio files, video, etc... into a unified format for the next phases.
 2. **Data splitting**: The next step is to divide the content into manageable segments. Segmenting the text into coherent sections or chunks that retain the context and meaning.
 3. **Data embeddings**: In this stage, the text chunks are transformed into numerical vectors. This transformation is done using embedding techniques that capture the semantic essence of the content.
-4. **Data Storing**: The last step is storing the generated embeddings which is typically in a vector database or store.
+4. **Data Storing**: The last step is storing the generated embeddings which is typically in a vector store.
 
 
 ### Data Retrieval & Generation
@@ -32,7 +32,7 @@ When building a basic **Retrieval-Augmented Generation (RAG)** system, there are
 #### Retrieval
 
 - **Embedding the Query**: Transforming the user’s query into an embedding form so it can be compared for similarity with the document embeddings.
-- **Searching the Vector DB**: The vector database or store contains vectors of different chunks of documents. Thus, by comparing this query embedding with the stored ones, the system determines which chunks are the most relevant to the query. Such comparison is often done with the help of computing cosine similarty or any other similarity metric.
+- **Searching the Vector**: The vector store contains vectors of different chunks of documents. Thus, by comparing this query embedding with the stored ones, the system determines which chunks are the most relevant to the query. Such comparison is often done with the help of computing cosine similarty or any other similarity metric.
 - **Selecting Top-K Chunks**: Based on the similarity scores obtained, the system takes the k-chunks closest to the query embedding.
 
 #### Generation
@@ -47,9 +47,9 @@ Now that we have more context about it, let's jump into the action!
 
 Everything is described in this [github repository](https://github.com/NachoCP/AskPDF). There is also a docker file there if you want to test the full application. I have used the following libraries:
 
-- **Langchain**  It is a framework for orchestrating the Large Language Models (LLMs). It gives the right instruments and approaches to control and coordinate LLMs should they be applied.
+- **[Langchain](https://python.langchain.com/v0.2/docs/introduction/)**  It is a framework for developing application using Large Language Models (LLMs). It gives the right instruments and approaches to control and coordinate LLMs should they be applied. 
 - **PyPDF** Used for loading and processing PDF documents. While PyMuPDF is known for its speed, I have faced several compatibility issues when setting up the Docker environment.
-- **FAISS** stands for Facebook AI Similarity Search and is a library used for fast similarity search and clustering of dense vectors. FAISS is also good for fast nearest neighbor search, so its use is perfect when dealing with vector embeddings, as in the case of document chunks.
+- **FAISS** stands for Facebook AI Similarity Search and is a library used for fast similarity search and clustering of dense vectors. FAISS is also good for fast nearest neighbor search, so its use is perfect when dealing with vector embeddings, as in the case of document chunks. I have decided to use this instead of a vector database for simplicity.
 - **Streamlit** Employed for building the user interface of the application. Streamlit allows for the rapid development of interactive web applications, making it an excellent choice for creating a seamless user experience.
 
 ### Data Indexing
